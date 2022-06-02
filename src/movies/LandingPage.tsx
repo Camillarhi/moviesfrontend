@@ -1,6 +1,7 @@
 import MoviesList from "./MoviesList";
 import { landingPageDTO } from "./movies.model";
 import { useEffect, useState } from "react";
+import Authorize from "../Auth/Authorize";
 
 export default function LandingPage(){
 const [movies, setMovies] = useState<landingPageDTO>({});
@@ -39,6 +40,7 @@ const [movies, setMovies] = useState<landingPageDTO>({});
 
     return(
         <>
+        <Authorize authorize={<>you are auth</>} notAuthorized={<>you are not authorized</>} />
          <h3>In Theaters</h3>
             <MoviesList movies={movies.inTheaters} />
 

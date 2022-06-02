@@ -16,7 +16,7 @@ import IndexMovieTheaters from "./movietheaters/IndexMovieTheaters";
 import RedirectToLandingPage from "./Utils/RedirectToLandingPage";
 
 const routes = [
-        {path: '/genres',component: IndexGenre, exact:true},
+        {path: '/genres',component: IndexGenre, exact:true, isAdmin:true},
         {path: '/genres/create', component: CreateGenre},
         {path: '/genres/edit/:id(\\d+)', component: EditGenre },
         
